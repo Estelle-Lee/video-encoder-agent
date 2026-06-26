@@ -1,0 +1,48 @@
+<svg width="680" viewBox="0 0 680 430" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="340" y="28" text-anchor="middle" font-size="12" fill="#888780">Entry points (cmd/)</text>
+
+  <!-- Web server -->
+  <rect x="120" y="44" width="200" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text x="220" y="68" text-anchor="middle" font-size="14" font-weight="500" fill="#0C447C">Web server</text>
+  <text x="220" y="86" text-anchor="middle" font-size="12" fill="#185FA5">browser UI + REST</text>
+
+  <!-- CLI -->
+  <rect x="360" y="44" width="200" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="460" y="68" text-anchor="middle" font-size="14" font-weight="500" fill="#085041">CLI</text>
+  <text x="460" y="86" text-anchor="middle" font-size="12" fill="#0F6E56">command-line</text>
+
+  <!-- arrows to core -->
+  <line x1="220" y1="100" x2="300" y2="150" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="460" y1="100" x2="380" y2="150" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Core -->
+  <rect x="160" y="154" width="360" height="72" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="340" y="180" text-anchor="middle" font-size="14" font-weight="500" fill="#3C3489">Core packages (internal/)</text>
+  <text x="340" y="202" text-anchor="middle" font-size="12" fill="#534AB7">config · policy · probe · verdict · transcode · storage</text>
+
+  <!-- arrows to deps -->
+  <line x1="270" y1="226" x2="220" y2="280" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="410" y1="226" x2="460" y2="280" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ffmpeg -->
+  <rect x="120" y="284" width="200" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+  <text x="220" y="308" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A">ffmpeg / ffprobe</text>
+  <text x="220" y="326" text-anchor="middle" font-size="12" fill="#5F5E5A">external process</text>
+
+  <!-- storage -->
+  <rect x="360" y="284" width="200" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+  <text x="460" y="308" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A">Storage</text>
+  <text x="460" y="326" text-anchor="middle" font-size="12" fill="#5F5E5A">local / S3</text>
+
+  <text x="340" y="378" text-anchor="middle" font-size="12" fill="#888780">Web and CLI are thin shells — all logic lives once in the core</text>
+
+  <!-- future desktop note -->
+  <rect x="240" y="394" width="200" height="24" rx="6" fill="none" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="4 3"/>
+  <text x="340" y="410" text-anchor="middle" font-size="12" fill="#888780">future: cmd/desktop (optional)</text>
+</svg>
