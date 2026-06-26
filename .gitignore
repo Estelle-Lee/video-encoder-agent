@@ -1,0 +1,56 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/bin/
+/dist/
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of `go tool cover`
+*.out
+coverage.txt
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Dependency directories (if vendoring)
+# vendor/
+
+# Test media — never commit sample videos
+*.mp4
+*.mkv
+*.mov
+*.avi
+*.webm
+*.m4a
+*.aac
+/testdata/media/
+
+# Local working directories (the 4-path pipeline)
+/tempUpload/
+/processing/
+/completeUpload/
+/failedUpload/
+/backup/
+
+# Local config with secrets (S3 keys, paths)
+config.local.json
+*.local.json
+.env
+.env.*
+
+# Logs
+*.log
+/logs/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
